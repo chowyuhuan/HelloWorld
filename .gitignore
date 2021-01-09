@@ -31,6 +31,9 @@
 *.out
 *.app
 
+# ProjcetFile
+*.vcxproj*
+
 # Folder
 Debug/
 .vs/
