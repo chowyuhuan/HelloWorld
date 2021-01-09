@@ -14,6 +14,7 @@ using namespace std;
 
 class NullClass {};
 class PtrClass		{ void*		p; };
+class RefClass		{ int&		r; };
 class CharClass		{ char		c; };
 class IntClass		{ int		i; };
 class FloatClass	{ float		f; };

@@ -11,6 +11,7 @@ int main()
     std::cout << std::endl;
     std::cout << "NullClass Size : " << sizeof(NullClass) << std::endl;
     std::cout << "PtrClass Size : " << sizeof(PtrClass) << std::endl;
+    std::cout << "RefClass Size : " << sizeof(RefClass) << std::endl;
     std::cout << "CharClass Size : " << sizeof(CharClass) << std::endl;
     std::cout << "IntClass Size : " << sizeof(IntClass) << std::endl;
     std::cout << "FloatClass Size : " << sizeof(FloatClass) << std::endl;
