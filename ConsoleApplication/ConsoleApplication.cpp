@@ -2,10 +2,27 @@
 //
 
 #include <iostream>
+#include "sizeofclass.h"
 
 int main()
 {
     std::cout << "Hello World!\n";
+
+    std::cout << std::endl;
+    std::cout << "NullClass Size : " << sizeof(NullClass) << std::endl;
+    std::cout << "PtrClass Size : " << sizeof(PtrClass) << std::endl;
+    std::cout << "CharClass Size : " << sizeof(CharClass) << std::endl;
+    std::cout << "IntClass Size : " << sizeof(IntClass) << std::endl;
+    std::cout << "FloatClass Size : " << sizeof(FloatClass) << std::endl;
+    std::cout << "DoubleClass Size : " << sizeof(DoubleClass) << std::endl;
+    std::cout << "StringClass Size : " << sizeof(StringClass) << std::endl;
+    std::cout << "MemoryAlignmentClass Size : " << sizeof(MemoryAlignmentClass) << std::endl;
+    std::cout << "DataClass Size : " << sizeof(DataClass) << std::endl;
+    std::cout << "FuncClass Size : " << sizeof(FuncClass) << std::endl;
+    std::cout << "FuncInlineClass Size : " << sizeof(FuncInlineClass) << std::endl;
+    std::cout << "VirtualBassClass Size : " << sizeof(VirtualBassClass) << std::endl;
+    std::cout << "VirtualClassA Size : " << sizeof(VirtualClassA) << std::endl;
+    std::cout << "VirtualClassB Size : " << sizeof(VirtualClassB) << std::endl;
 }
 
 // Run program: Ctrl + F5 or Debug > Start Without Debugging menu
