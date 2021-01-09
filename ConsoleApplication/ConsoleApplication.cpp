@@ -17,6 +17,7 @@ int main()
     std::cout << "FloatClass Size : " << sizeof(FloatClass) << std::endl;
     std::cout << "DoubleClass Size : " << sizeof(DoubleClass) << std::endl;
     std::cout << "StringClass Size : " << sizeof(StringClass) << std::endl;
+    std::cout << "TwoIntClass Size : " << sizeof(TwoIntClass) << std::endl;
     std::cout << "MemoryAlignmentClass Size : " << sizeof(MemoryAlignmentClass) << std::endl;
     std::cout << "DataClass Size : " << sizeof(DataClass) << std::endl;
     std::cout << "FuncClass Size : " << sizeof(FuncClass) << std::endl;
@@ -24,6 +25,24 @@ int main()
     std::cout << "VirtualBassClass Size : " << sizeof(VirtualBassClass) << std::endl;
     std::cout << "VirtualClassA Size : " << sizeof(VirtualClassA) << std::endl;
     std::cout << "VirtualClassB Size : " << sizeof(VirtualClassB) << std::endl;
+
+    DataClass dClass;
+    std::cout << &dClass << std::endl;
+    std::cout << "s "<< &dClass.sClass << std::endl;
+    std::cout << "i "<< &dClass.iClass << std::endl;
+    std::cout << "f "<< &dClass.fClass << std::endl;
+    std::cout << "d "<< &dClass.dClass << std::endl;
+    std::cout << "p "<< &dClass.pClass << std::endl;
+    std::cout << "ii "<< &dClass.iiClass << std::endl;
+
+    std::cout << "VirtualBassClass foo " << pointer_cast<void*>(&VirtualBassClass::Foo) << std::endl;
+    std::cout << "VirtualClassA foo " << pointer_cast<void*>(&VirtualClassA::Foo) << std::endl;
+    std::cout << "VirtualClassB foo " << pointer_cast<void*>(&VirtualClassB::Foo) << std::endl;
+    std::cout << "VirtualClassC foo " << pointer_cast<void*>(&VirtualClassC::Foo) << std::endl;
+    std::cout << "VirtualBassClass foo1 " << pointer_cast<void*>(&VirtualBassClass::Foo1) << std::endl;
+    std::cout << "VirtualClassA foo1 " << pointer_cast<void*>(&VirtualClassA::Foo1) << std::endl;
+    std::cout << "VirtualClassB foo1 " << pointer_cast<void*>(&VirtualClassB::Foo1) << std::endl;
+    std::cout << "VirtualClassC foo1 " << pointer_cast<void*>(&VirtualClassC::Foo1) << std::endl;
 }
 
 // Run program: Ctrl + F5 or Debug > Start Without Debugging menu

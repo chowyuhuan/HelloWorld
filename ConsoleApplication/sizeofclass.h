@@ -20,6 +20,7 @@ class IntClass		{ int		i; };
 class FloatClass	{ float		f; };
 class DoubleClass	{ double	d; };
 class StringClass	{ string    s; };
+class TwoIntClass : IntClass { int i; };
 
 class MemoryAlignmentClass
 {
@@ -29,12 +30,16 @@ class MemoryAlignmentClass
 
 class DataClass
 {
-	NullClass	nClass;
-	PtrClass	pClass;
-	CharClass	cClass;
+public:
+	StringClass sClass;
+	//NullClass	nClass;
+	//PtrClass	pClass;
+	//CharClass	cClass;
 	IntClass	iClass;
 	FloatClass	fClass;
 	DoubleClass dClass;
+	PtrClass	pClass;
+	IntClass	iiClass;
 };
 
 class FuncClass
@@ -49,17 +54,27 @@ class FuncInlineClass
 
 class VirtualBassClass
 {
+public:
 	virtual void Foo() = 0;
-};
-
-class VirtualClassA : VirtualBassClass
-{
-	virtual void Foo() override {}
-};
-
-class VirtualClassB : VirtualBassClass
-{
-	virtual void Foo() override {}
-
 	void Foo1() {}
 };
+
+class VirtualClassA : public VirtualBassClass {};
+
+class VirtualClassB : public VirtualBassClass
+{
+public:
+	virtual void Foo() override {}
+};
+
+class VirtualClassC : public VirtualBassClass
+{
+public:
+	virtual void Foo() override {}
+};
+
+template<typename dst_type, typename src_type>
+dst_type pointer_cast(src_type src)
+{
+	return *static_cast<dst_type*>(static_cast<void*>(&src));
+}
