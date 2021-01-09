@@ -3,6 +3,7 @@
 
 #include <iostream>
 #include "sizeofclass.h"
+#include "linkedlist.h"
 
 int main()
 {
@@ -43,6 +44,8 @@ int main()
     std::cout << "VirtualClassA foo1 " << pointer_cast<void*>(&VirtualClassA::Foo1) << std::endl;
     std::cout << "VirtualClassB foo1 " << pointer_cast<void*>(&VirtualClassB::Foo1) << std::endl;
     std::cout << "VirtualClassC foo1 " << pointer_cast<void*>(&VirtualClassC::Foo1) << std::endl;
+
+    LinkedList<int> intlist;
 }
 
 // Run program: Ctrl + F5 or Debug > Start Without Debugging menu
